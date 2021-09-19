@@ -6,9 +6,6 @@ html {
 }
 body {
     font-family: 'Open Sans', sans-serif;
-    text-align: center;
-    width: 50rem;
-    margin: 0 auto;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Kavivanar', cursive;
@@ -30,31 +27,51 @@ a:hover {
     font-size: 0.8rem;
     color: #89A611;
 }
+.wrapper {
+    width: 60%;
+    margin: 0 auto;
+}
 footer {
     text-align: center;
     font-size: 0.8rem;
 }
+nav {
+    border-top: 2px solid #DA0090;
+    border-bottom: 2px solid #A51F10;
+}
 nav ul {
-    border-style: solid;
-    border-width: 2px 0 2px 0;
-    padding: 0.5rem;
-    border-top-color: #DA0090;
-    border-bottom-color: #A51F10;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 nav li {
-    border: 0px solid green;
-    margin: 1rem;
-    list-style-type: none;
-    display: inline;
+    display: inline-block;
     color: #A51F10;
+}
+nav a {
+    display: block;
+    padding: 0.8rem 1.4rem;
+}
+nav a:hover {
+    text-decoration: none;
+    background-color: black;
+    color: orange;
 }
 header {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.leftheader {
+    flex-basis: 40%;
+    text-align: right;
+    padding-right: 0.8rem;
 }
 .rightheader {
-    margin-left: 1.5rem;
+    flex-basis: 60%;
+    padding-left: 0.8rem;
+    margin-top: 2.5rem;
 }
 .rightheader h1{
     font-weight: bold;
@@ -63,12 +80,25 @@ header {
 .rightheader p {
     margin-top: -1rem;
     font-size: 0.8rem;
-    text-align: left;
+}
+section {
+    margin-bottom: 3rem;
+    border-bottom: 2px solid #DA0090;
+    font-size: 0.8rem;
 }
 article {
-    display: flex;
-    margin: 1rem 0 1rem 0;
-    border: 0px solid purple;
+    margin: 2rem 0 2rem 0;
+    border: 1px solid purple;
+}
+article img {
+    border-radius: 1rem;
+    margin: 0 1rem 1rem 0;
+    float: left;
+}
+article:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 footer {
     margin-top: 0.2rem;
@@ -78,22 +108,4 @@ footer {
 footer li {
     list-style-type: none;
     display: inline-block;
-}
-section {
-    border: 0px solid red;
-    margin-top: 3rem;
-    border-bottom: 2px solid #DA0090;
-    font-size: 0.8rem;
-}
-.leftcontent img {
-    border-radius: 1rem;
-    border: 0px solid green;
-}
-.rightcontent {
-    text-align: left;
-    margin-left: 2rem;
-    border: 0px solid blue;
-}
-.rightcontent h2 {
-    font-size: 1.7rem;
 }
